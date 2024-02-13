@@ -1,6 +1,9 @@
 import historicoInflacao from '../dados/historicoInflacao.js';
 
-export const buscaIpca =() =>
+export function buscaIpcaPorID (id)
 {
-    return historicoInflacao;
+   let idEncontrado =  historicoInflacao.find(item => item.id === id)
+   return idEncontrado;
 }
+    
+export default buscaIpcaPorID;
